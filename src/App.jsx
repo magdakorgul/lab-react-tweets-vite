@@ -1,5 +1,6 @@
 import "./App.css";
 import Tweet from "./components/Tweet";
+// import img from "./components/Tweet/img"
 
 const tweetsArray = [
   {
@@ -37,10 +38,21 @@ const tweetsArray = [
   },
 ];
 
-function App() {
+function App({}) {
   return (
     <div className="App">
-      <Tweet />
+      {/* {tweetsArray.map(function (tweet, index){ */}
+        <Tweet tweet={tweetsArray[0]} />
+        <Tweet tweet={tweetsArray[1]} />
+        <Tweet tweet={tweetsArray[2]} />
+        {/* // name={tweet.user.name}
+        // image src={tweet.user.image} alt={tweet.user.image.profile}
+        // handle={tweet.user.handle}
+        // timestamp={tweet.timestamp}
+        // message={tweet.message} */}
+        
+      {/* })} */}
+     
     </div>
   );
 }
